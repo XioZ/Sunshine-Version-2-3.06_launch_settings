@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditTextPreference
+        android:title="@string/pref_location_label"
+        android:key="@string/pref_location_key"
+        android:defaultValue="@string/pref_location_default"
+        android:inputType="text"
+        android:singleLine="true" />
+    <!--title: label displayed to the user
+    key: key-value in shared preferences, functions like an id attribute
+    defaultValue: shown initially on the pop up dialog of the "location" wireframe-->
+
+    <ListPreference
+        android:title="@string/pref_units_label"
+        android:key="@string/pref_units_key"
+        android:defaultValue="@string/pref_units_metric"
+        android:entryValues="@array/pref_units_values"
+        android:entries="@array/pref_units_options"/>
+    <!--entries are user visible array of strings, and maps to labels-->
+</PreferenceScreen>
